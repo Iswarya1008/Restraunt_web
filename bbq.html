@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BBQ Restaurant</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .menu-img {
+        height: 200px;
+        object-fit: cover;
+      }
+      footer {
+        background-color: #343a40;
+        color: white;
+      }
+      footer a {
+        color: #ffc107;
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+      .hero-section {
+        background-image: url("https://media02.stockfood.com/largepreviews/MzUyNzkxMTkx/11380361-A-flaming-hot-barbecue-grill-against-a-wooden-wall.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        position: relative;
+      }
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* dark overlay */
+      }
+      .hero-section .content {
+        position: relative;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">🔥 BBQ Delight</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#booking">Book Table</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero-section">
+      <div class="content">
+        <h1 class="display-4 fw-bold">Welcome to BBQ Delight</h1>
+        <p class="lead">Grilled Perfection on Every Plate!</p>
+      </div>
+    </div>
+
+    <!-- Menu Section -->
+    <section id="menu" class="container my-5">
+      <h2 class="text-center mb-4">Our Menu</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="https://www.simplyrecipes.com/thmb/h8DIG6AHNRxhEYIcI9r0gKvlkj8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2016__10__2016-10-26-OvenBBQChicken-7-af966bad06234540ab5e119bae1802b1.jpg"
+              class="card-img-top menu-img"
+              alt="BBQ Chicken"
+            />
+            <div class="card-body">
+              <h5 class="card-title">BBQ Chicken</h5>
+              <p class="card-text">
+                Tender grilled chicken with our signature smoky sauce.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="https://www.onceuponachef.com/images/2009/08/grilled-flank-steak-1200x802.jpg"
+              class="card-img-top menu-img"
+              alt="Grilled Beef"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Grilled Beef Ribs</h5>
+              <p class="card-text">
+                Juicy ribs marinated and grilled to perfection.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="https://thecatchae.org/images/about2.jpg"
+              class="card-img-top menu-img"
+              alt="Sea Grill"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Sea Grill</h5>
+              <p class="card-text">
+                Colorful grilled Fish & Prawns served with spicy dip.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table Booking Section -->
+    <section id="booking" class="bg-light py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Book a Table</h2>
+
+        <form action="" method="POST" class="row g-3 justify-content-center">
+          <div class="col-md-4">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+          <div class="col-md-4">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="col-md-4">
+            <input type="date" class="form-control" required />
+          </div>
+          <div class="col-md-4">
+            <input type="time" class="form-control" required />
+          </div>
+          <div class="col-md-4">
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Number of People"
+              required
+            />
+          </div>
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-warning px-5" onclick="ab()">
+              Book Now
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="mt-5 py-4">
+      <div class="container text-center">
+        <p class="mb-1">© 2025 BBQ Delight. All rights reserved.</p>
+        <p>
+          <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> |
+          <a href="#">Contact Us</a>
+        </p>
+      </div>
+    </footer>
+    <!-- Alert notification -->
+    <script>
+      function ab() {
+        alert(
+          "🎉 Your event booking was successful! We will contact you soon."
+        );
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
